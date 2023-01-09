@@ -34,8 +34,8 @@ class Perceptron(object):
         return np.where(self.net_input(X) >= 0.0, 1, -1)
 
 
-X = np.array([[0, 1], [1,1]])
-y = np.array([0, 1])
+X = np.array([[0, 0], [0, 1], [1, 0], [1, 1]])
+y = np.array([0, 1, 1, 1])
 print(X.shape[1])
 ppn = Perceptron(eta=0.1, n_iter=10)
 ppn.fit(X, y)
